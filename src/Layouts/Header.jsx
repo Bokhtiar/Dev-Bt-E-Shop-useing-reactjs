@@ -108,7 +108,7 @@ export default function Header() {
                                             </ul>
                                         </li> 
                                         <li><a href="404.html">404</a></li>
-                                        <li><Link to={'/about'}>Contact</Link></li>
+                                        <li><Link to={'/contact'}>Contact</Link></li>
                                     </ul>
                                 </div>
                             </div>
