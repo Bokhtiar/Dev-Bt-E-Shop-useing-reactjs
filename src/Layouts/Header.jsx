@@ -94,7 +94,7 @@ export default function Header() {
                                         <li><Link to={'/'} className="active">Home</Link></li>
                                         <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
                                             <ul role="menu" className="sub-menu">
-                                                <li><a href="shop.html">Products</a></li>
+                                                <li><Link to={'products'}>Products</Link></li>
                                                 <li><a href="product-details.html">Product Details</a></li> 
                                                 <li><a href="checkout.html">Checkout</a></li> 
                                                 <li><a href="cart.html">Cart</a></li> 

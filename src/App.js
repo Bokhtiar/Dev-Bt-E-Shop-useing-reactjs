@@ -10,6 +10,8 @@ import Login from "./Auth/Login";
 import Registration from "./Auth/Registration";
 import Footer from "./Layouts/Footer";
 import Contact from "./Components/Contact";
+import ProductList from "./Components/Product/ProductList";
+import ProductSingle from "./Components/Product/ProductSingle";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/register" element={<Registration />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/products" element={<ProductList />}></Route>
+        <Route path="/productsingle/:id" element={<ProductSingle />}></Route>
       </Routes>
       <Footer />
      </BrowserRouter>
