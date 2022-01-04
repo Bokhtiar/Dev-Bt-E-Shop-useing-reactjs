@@ -55,7 +55,7 @@ export default function Index() {
 		CategoryItem.push(
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title"><Link to={`category/${'jewelery'}`}>{Categories[index]}</Link></h4>
+					<h4 class="panel-title"><Link to={`category/${Categories[index]}`}>{Categories[index]}</Link></h4>
 				</div>
 			</div>
 		)
