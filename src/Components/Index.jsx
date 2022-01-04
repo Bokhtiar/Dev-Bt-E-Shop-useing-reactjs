@@ -2,23 +2,18 @@ import React,{useState, useEffect} from 'react'
 import { Link, Nav } from 'react-router-dom'
 import Footer from '../Layouts/Footer'
 import Slider from '../Layouts/Slider'
+import Category from './Category/Category'
 
 
 export default function Index() {
     const [Products, setProduct] = useState([])
-	const [Categories, setCategories] = useState([])
     useEffect(() => {
 		fetch('https://fakestoreapi.com/products/')
 		.then(res=>res.json())
 		.then(json=>setProduct(json))
     },[])
 
-	useEffect(() => {
-		fetch('https://fakestoreapi.com/products/categories')
-		.then(res=>res.json())
-		.then(json=>setCategories(json))
-	}, [])
-	
+
     let items =[];
     for (let index = 0; index < Products.length; index++) {
         console.log(Products) 
@@ -43,24 +38,14 @@ export default function Index() {
                 <div class="choose">
                     <ul class="nav nav-pills nav-justified">
                         <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                        <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                        <li><Link to={`/productsingle/${Products[index].id}`}><i class="fa fa-plus-square"></i>View</Link></li>
                     </ul>
                 </div>
             </div>
         </div>
         )
     }
-	let CategoryItem = [];
-	for (let index = 0; index < Categories.length; index++) {
-		CategoryItem.push(
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title"><Link to={`category/${Categories[index]}`}>{Categories[index]}</Link></h4>
-				</div>
-			</div>
-		)
-	}
-	console.log(Categories)
+	
     return (
         <div>
         <Slider />
@@ -71,7 +56,7 @@ export default function Index() {
 					<div class="left-sidebar">
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian">
-							{CategoryItem}
+							<Category />
 						</div>
 					
 						<div class="brands_products">

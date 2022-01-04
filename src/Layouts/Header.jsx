@@ -65,10 +65,10 @@ export default function Header() {
                             <div className="col-sm-8">
                                 <div className="shop-menu pull-right">
                                     <ul className="nav navbar-nav">
-                                        <li><a href="#"><i className="fa fa-user"></i> Account</a></li>
-                                        <li><a href="#"><i className="fa fa-star"></i> Wishlist</a></li>
-                                        <li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
-                                        <li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
+                                        <li><Link to={'/404'}><i className="fa fa-user"></i> Account</Link></li>
+                                        <li><Link to={'/404'}><i className="fa fa-star"></i> Wishlist</Link></li>
+                                        <li><Link to={'/404'}><i className="fa fa-crosshairs"></i> Checkout</Link></li>
+                                        <li><Link to={'/404'}><i className="fa fa-shopping-cart"></i> Cart</Link></li>
                                         <li><Link to={'/login'}><i className="fa fa-lock"></i> Login</Link></li>
                                     </ul>
                                 </div>
@@ -95,18 +95,16 @@ export default function Header() {
                                         <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
                                             <ul role="menu" className="sub-menu">
                                                 <li><Link to={'products'}>Products</Link></li>
-                                                <li><a href="checkout.html">Checkout</a></li> 
-                                                <li><a href="cart.html">Cart</a></li> 
+                                                <li><Link to={'404'}>Checkout</Link></li> 
+                                                <li><Link to={'404'}>Cart</Link></li> 
                                                 <li><Link to={'/login'}>Login</Link></li> 
                                             </ul>
                                         </li> 
                                         <li className="dropdown"><a href="#">Blog<i className="fa fa-angle-down"></i></a>
                                             <ul role="menu" className="sub-menu">
-                                                <li><a href="blog.html">Blog List</a></li>
-                                                <li><a href="blog-single.html">Blog Single</a></li>
+                                                <li><Link to={'blogs'}>Blog List</Link></li>
                                             </ul>
                                         </li> 
-                                        <li><a href="404.html">404</a></li>
                                         <li><Link to={'/contact'}>Contact</Link></li>
                                     </ul>
                                 </div>

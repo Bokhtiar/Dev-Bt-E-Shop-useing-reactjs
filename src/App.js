@@ -13,6 +13,8 @@ import Contact from "./Components/Contact";
 import ProductList from "./Components/Product/ProductList";
 import ProductSingle from "./Components/Product/ProductSingle";
 import CategoryProduct from "./Components/Category/CategoryProduct";
+import BlogList from "./Components/Blog/BlogList";
+import E404 from "./Components/E404";
 
 function App() {
   return (
@@ -29,6 +31,9 @@ function App() {
         <Route path="/products" element={<ProductList />}></Route>
         <Route path="/productsingle/:id" element={<ProductSingle />}></Route>
         <Route path="/category/:id" element={<CategoryProduct />}></Route>
+        <Route path="/blogs" element={<BlogList />}></Route>
+        <Route path="/404" element={<E404 />}></Route>
+        
       </Routes>
       <Footer />
      </BrowserRouter>
