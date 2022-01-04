@@ -95,10 +95,9 @@ export default function Header() {
                                         <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
                                             <ul role="menu" className="sub-menu">
                                                 <li><Link to={'products'}>Products</Link></li>
-                                                <li><a href="product-details.html">Product Details</a></li> 
                                                 <li><a href="checkout.html">Checkout</a></li> 
                                                 <li><a href="cart.html">Cart</a></li> 
-                                                <li><Link to={'/login'}>Loginss</Link></li> 
+                                                <li><Link to={'/login'}>Login</Link></li> 
                                             </ul>
                                         </li> 
                                         <li className="dropdown"><a href="#">Blog<i className="fa fa-angle-down"></i></a>

@@ -2,17 +2,16 @@ import React, {useState, useEffect} from 'react'
 import { Link, Nav } from 'react-router-dom'
 
 export default function ProductList() {
-    const [Products, setProduct] = useState('')
+    const [Products, setProduct] = useState([]);
+
     useEffect(() => {
-        return () => {
-            fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>setProduct(json)) 
-        }
-    },[])    
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+        .then(json=>setProduct(json)) 
+    },[])       
     let items = [];
     for (let index = 0; index < Products.length; index++) {
-        console.log(Products)
+        console.log(Products)    
         items.push(
             <div class="col-sm-4">
             <div class="product-image-wrapper">
@@ -34,7 +33,7 @@ export default function ProductList() {
                 <div class="choose">
                     <ul class="nav nav-pills nav-justified">
                         <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                        <li><Link to={'/productsingle/12'}><i class="fa fa-plus-square"></i>View</Link></li>
+                        <li><Link to={`/productsingle/${Products[index].id}`}><i class="fa fa-plus-square"></i>View</Link></li>
                     </ul> 
                 </div>
             </div>

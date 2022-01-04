@@ -12,12 +12,13 @@ import Footer from "./Layouts/Footer";
 import Contact from "./Components/Contact";
 import ProductList from "./Components/Product/ProductList";
 import ProductSingle from "./Components/Product/ProductSingle";
+import CategoryProduct from "./Components/Category/CategoryProduct";
 
 function App() {
   return (
     
     <div>
-      <BrowserRouter> 
+      <BrowserRouter>    
       <Header />
       <Routes>
         <Route path="/" element={<Index />}></Route>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/products" element={<ProductList />}></Route>
         <Route path="/productsingle/:id" element={<ProductSingle />}></Route>
+        <Route path="/category/:id" element={<CategoryProduct />}></Route>
       </Routes>
       <Footer />
      </BrowserRouter>
